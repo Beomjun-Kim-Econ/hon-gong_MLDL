@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import sklearn.neighbors
 from sklearn.neighbors import KNeighborsClassifier
 
 # 데이터셋
@@ -36,7 +37,7 @@ weight = bream_weight + smelt_weight
 fish_data = [[l,w] for l, w in zip(length, weight)]
 print(fish_data)
 
-# making labal
+# making label
 fish_target = [1] * 35 + [0] * 14
 print(fish_target)
 
@@ -47,3 +48,11 @@ kn.fit(fish_data, fish_target)
 # result
 result = kn.score(fish_data, fish_target)
 print(result)
+
+# etc
+"""
+sklearn.neighbors.KNeighborsClassifier: k-NN algorithm k-NN 알고리즘
+fit(): using like fit(training set, label). 훈련 
+predict() : predict one sample that what is the class of the target 
+score(): 이하 생략
+"""
