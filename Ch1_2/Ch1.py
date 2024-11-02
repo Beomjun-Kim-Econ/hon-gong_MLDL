@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import sklearn.neighbors
 from sklearn.neighbors import KNeighborsClassifier
 
 # 데이터셋
